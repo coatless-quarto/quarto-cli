@@ -26,6 +26,8 @@ export function archiveUrl(
   // TODO: Deal w/archive bin deps for this
   if (dependency.bucket === "deno") {
     return platformDependency.url + platformDependency.filename;
+  } else if (dependency.bucket === "pandoc") {
+    return "https://github.com/coatless-quarto/pandoc/releases/download/3.1.8.1/pandoc-3.1.8.1-arm64-macOS.zip";
   } else {
     return `${kBucketBaseUrl}/${dependency.bucket}/${dependency.version}/${platformDependency.filename}`;
   }

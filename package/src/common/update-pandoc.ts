@@ -65,7 +65,7 @@ export function updatePandoc() {
 
       // Call archive-bin-deps for this file
       await withWorkingDir(async (workingDir) => {
-        await archiveBinaryDependency(pandocDependency, workingDir);
+        // await archiveBinaryDependency(pandocDependency, workingDir);
 
         // Configure this version of pandoc
         await configureDependency(
@@ -174,7 +174,7 @@ async function writePandocTemplates(
   );
 
   const srcZipUrl =
-    `https://github.com/jgm/pandoc/archive/refs/tags/${version}.zip`;
+    `https://github.com/coatless-quarto/pandoc/archive/refs/tags/${version}.zip`;
 
   const pandocDir = `pandoc-${version}`;
   const zipFile = join(workingDir, "pandoc");

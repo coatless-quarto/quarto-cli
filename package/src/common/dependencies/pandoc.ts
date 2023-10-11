@@ -23,7 +23,7 @@ export function pandoc(version: string): Dependency {
     return {
       filename,
       url:
-        `https://github.com/jgm/pandoc/releases/download/${version}/${filename}`,
+        `https://github.com/coatless-quarto/pandoc/releases/download/${version}/${filename}`,
       configure: async (config: Configuration, path: string) => {
         const dir = dirname(path);
         // Mac subdirectories include architecture

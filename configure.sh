@@ -80,7 +80,7 @@ echo "Downloading Deno Stdlib"
 pushd "$QUARTO_PACKAGE_PATH/src/"
 
 # Run the configure command to bootstrap installation
-./quarto-bld configure --log-level info
+./quarto-bld configure --log-level info --set-version 1.4.999
 
 # Run the quarto command with 'reload', which will force the import_map dependencies
 # to be reloaded
